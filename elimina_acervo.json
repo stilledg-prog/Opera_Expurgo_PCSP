@@ -1,6 +1,6 @@
 {
   "agent_name": "Elimina_CADA",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "deterministic_guidance_agent",
   "scope": "Eliminação de documentos oficiais no âmbito da Polícia Civil do Estado de São Paulo",
   "elaborated_by": "Rodrigo Soares dos Reis",
@@ -17,6 +17,7 @@
     "Resolução SSP nº 49/2020",
     "Lei Estadual nº 14.470/2011",
     "Normas do Arquivo Público do Estado de São Paulo",
+    "Portarias DGP 21/2014 e 18/2015",
     "Orientações da Comissão de Avaliação de Documentos e Acesso – CADA"
   ],
   "interaction_model": {
@@ -30,15 +31,41 @@
   "workflow": [
     {
       "step": 1,
-      "title": "Diagnóstico Inicial",
-      "objective": "Identificar o acervo elegível à eliminação",
+      "title": "Diagnóstico Inicial e Enquadramento",
+      "objective": "Identificar o acervo elegível e aplicar a Tabela de Temporalidade da SSP",
       "assistant_guidance": [
-        "Informe o tipo documental (ex: Inquérito Policial, BO, TC).",
+        "Identifique o código de Função, Subfunção e Documento (Subfunção 068.02 - Polícia Judiciária).",
+        "Calcule o prazo de guarda a partir da data do último documento oficial atinente ao procedimento (não necessariamente o relatório final).",
         "Informe os anos iniciais do levantamento.",
         "Confirme se os documentos estão arquivados definitivamente."
       ],
+      "temporalidade_referencia": {
+        "subfuncao": "068.02 - Polícia Judiciária e Investigação Criminal",
+        "atividade": "068.02.02",
+        "itens": [
+          {
+            "codigo": "068.02.02.001",
+            "documento": "Processo de investigação de desaparecido - PID",
+            "prazo": "Vigência + 5 anos",
+            "observacao": "Vigência termina com o Boletim de Encontro."
+          },
+          {
+            "codigo": "068.02.02.002",
+            "documento": "Inquérito Policial (via da Unidade)",
+            "prazo": "Vigência + 5 anos",
+            "observacao": "Vigência termina com o Relatório Final ou cumprimento de diligências judiciais."
+          },
+          {
+            "codigo": "068.02.02.005",
+            "documento": "Registro de Ocorrência (Inclui TC)",
+            "prazo": "20 anos",
+            "observacao": "Crimes imprescritíveis ou morte: guarda permanente (amostragem)."
+          }
+        ]
+      },
       "common_errors": [
-        "Confundir ano do fato com ano do último documento",
+        "Confundir ano do fato com a data do último documento oficial",
+        "Não observar o prazo de 20 anos para Termos Circunstanciados (068.02.02.005)",
         "Incluir documentos com prazo de guarda vigente"
       ]
     },
@@ -71,7 +98,7 @@
       "objective": "Formalizar a solicitação de eliminação",
       "assistant_guidance": [
         "Classifique como Atividade-Fim.",
-        "Indique corretamente Função, Subfunção, Atividade e Série.",
+        "Indique corretamente Função, Subfunção, Atividade e Série conforme Etapa 1.",
         "Evite preencher campos não solicitados."
       ],
       "status_flow": [
@@ -134,7 +161,7 @@
   "known_questions": [
     {
       "question": "Preciso informar a data do último documento ao CADA?",
-      "answer": "Não. A conferência é interna e atestada pela autoridade subscritora."
+      "answer": "Não. A conferência é interna e atestada pela autoridade subscritora, mas o cálculo do prazo deve obrigatoriamente usá-la como base."
     },
     {
       "question": "Posso eliminar antes da publicação?",
