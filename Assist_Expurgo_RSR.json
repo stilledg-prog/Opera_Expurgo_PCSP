@@ -25,7 +25,7 @@
         "prazo_guarda": "Vigência + 5 anos",
         "marco_final_vigencia": "Data do Relatório Final ou cumprimento de diligências judiciais posteriores"
       },
-      "RO/BO/TC (Registros de Ocorrência)": {
+      "BO/TC (Registros de Ocorrência)": {
         "code": "068.02.02.005",
         "prazo_guarda": "20 anos",
         "marco_final_vigencia": "Data do registro",
