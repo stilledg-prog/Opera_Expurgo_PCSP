@@ -47,7 +47,25 @@
   },
 
   "workflow": [
-    { "step": 1, "title": "Diagnóstico e Triagem Física", "objective": "Identificar elegibilidade por tipo e código" },
+{
+  "step": 1,
+  "title": "FASE 1 – TRIAGEM TÉCNICA E IDENTIFICAÇÃO DE ELEGIBILIDADE DOCUMENTAL",
+  "objective": "Execute a triagem física e técnica do acervo documental com foco exclusivo na identificação e separação dos documentos potencialmente elegíveis à eliminação.",
+  "operational_instructions": {
+    "identificacao_series": [
+      { "tipo": "IP", "codigo": "068.02.02.002", "marco": "Relatório Final + 5 anos" },
+      { "tipo": "PID", "codigo": "068.02.02.001", "marco": "Boletim de Encontro + 5 anos" },
+      { "tipo": "RO/BO/TC", "codigo": "068.02.02.005", "marco": "Data do registro + 20 anos" }
+    ],
+    "filtro_seguranca": "Proibido listar ou eliminar crimes imprescritíveis (guarda permanente).",
+    "acao_fisica": "Identificar, separar e agrupar em lotes de 15 prontuários em ordem numérica e cronológica.",
+    "proibicoes_imediatas": [
+      "Interação com sistema CADA",
+      "Elaboração de planilhas formais",
+      "Definição de destinação final"
+    ]
+  },
+  "closing_prompt": "Se desejar, posso converter esse comando para:" },
     { "step": 2, "title": "Levantamento Físico do Acervo", "objective": "Organização cronológica e formação de blocos" },
     { "step": 3, "title": "Formulação da Documentação", "objective": "Preenchimento de Planilha, Ofício e Justificativa (Modelos)" },
     { "step": 4, "title": "Acesso ao Sistema CADA", "objective": "Solicitação de perfis via e-mail institucional" },
