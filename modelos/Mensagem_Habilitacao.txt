@@ -1,0 +1,39 @@
+
+Assunto: Solicitação de habilitação de acesso – Perfis SOLICITANTE e SUBCADA
+Para: cada.ssp@sp.gov.br 
+
+
+Prezados,
+
+Considerando a necessidade de solicitação de eliminação de documentos desta unidade no sistema CADA, venho requerer a habilitação dos perfis SOLICITANTE e SUBCADA, conforme as orientações vigentes.
+
+
+Seguem os dados necessários para o cadastro:
+
+1. SOLICITANTE 
+
+Nome Completo: [Nome Completo] 
+CPF: [Inserir CPF] 
+E-mail funcional: [e-mail] 
+Telefone: [Inserir Telefone] 
+Unidade:[Informar o Distrito Policial] 
+Cargo: Escrivão(ã) de Polícia Chefe 
+Município: [Cidade] 
+
+2. SUBCADA
+
+Nome Completo: [Nome Completo] 
+CPF: [Inserir CPF] 
+E-mail funcional: [Inserir e-mail] 
+Telefone: [Inserir Telefone] 
+Unidade: [Informar o Distrito Policial] 
+Cargo: Delegado de Polícia Titular 
+Município: [Cidade] 
+
+Solicitamos o envio de senhas e das instruções para acesso conforme permissões do setor responsável.
+
+Atenciosamente,
+
+NOME 
+Escrivão de Polícia Chefe 
+Cartório Central
