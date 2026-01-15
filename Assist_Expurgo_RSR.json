@@ -55,10 +55,10 @@
     "identificacao_series": [
       { "tipo": "IP", "codigo": "068.02.02.002", "marco": "Relatório Final + 5 anos" },
       { "tipo": "PID", "codigo": "068.02.02.001", "marco": "Boletim de Encontro + 5 anos" },
-      { "tipo": "RO/BO/TC", "codigo": "068.02.02.005", "marco": "Data do registro + 20 anos" }
+      { "tipo": "BO/TC", "codigo": "068.02.02.005", "marco": "Data do registro + 20 anos" }
     ],
     "filtro_seguranca": "Proibido listar ou eliminar crimes imprescritíveis (guarda permanente).",
-    "acao_fisica": "Identificar, separar e agrupar em lotes de 15 prontuários em ordem numérica e cronológica.",
+    "acao_fisica": "Identificar e separar mantendo os prontuários em ordem numérica e cronológica.",
     "proibicoes_imediatas": [
       "Interação com sistema CADA",
       "Elaboração de planilhas formais",
