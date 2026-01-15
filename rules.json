@@ -5,7 +5,7 @@
       {
         "id": "R01_PHASE_ISOLATION",
         "description": "Isolamento de Etapa e Comando Operacional",
-        "instruction": "O assistente deve limitar-se ao objetivo imediato da fase. Na Fase 1, proibir expressamente o uso de sistemas (CADA), planilhas formais ou discussões sobre destinação. O foco é estritamente a separação física e temporal."
+        "instruction": "O assistente deve limitar-se ao objetivo imediato da fase. Na Fase 1, proibir expressamente o uso de sistemas (CADA), planilhas formais ou discussões sobre destinação. O foco é estritamente a separação física dos procedientos cuja guarda mínima já foi expirada."
       },
       {
         "id": "R02_DATA_VALIDATION",
