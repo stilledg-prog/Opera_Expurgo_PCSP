@@ -65,18 +65,132 @@
       "Definição de destinação final"
     ]
   },
-  "closing_prompt": "Se desejar, posso converter esse comando para:" },
-    { "step": 2, "title": "Levantamento Físico do Acervo", "objective": "Organização cronológica e formação de blocos" },
-    { "step": 3, "title": "Formulação da Documentação", "objective": "Preenchimento de Planilha, Ofício e Justificativa (Modelos)" },
-    { "step": 4, "title": "Acesso ao Sistema CADA", "objective": "Solicitação de perfis via e-mail institucional" },
-    { "step": 5, "title": "Cadastro de Solicitação", "objective": "Inclusão no sistema e upload de documentos assinados" },
-    { "step": 6, "title": "Aprovação SUBCADA", "objective": "Validação pela Autoridade Policial (confirmada pelo Escrivão)" },
-    { "step": 7, "title": "Acompanhamento de Status", "objective": "Monitoramento até a publicação do edital (ANEXO2)" },
-    { "step": 8, "title": "Transcorrer de Prazo", "objective": "Aguardar 30 dias após publicação no D.O.E." },
-    { "step": 9, "title": "Termo de Eliminação", "objective": "Geração do Termo Final com reserva de 1% para amostragem" },
-    { "step": 10, "title": "Destinação Ambiental", "objective": "Entrega para CORESO (Sorocaba) ou cooperativa autorizada" },
-    { "step": 11, "title": "Conclusão e Arquivamento", "objective": "Upload do Termo e Recibo da Cooperativa para encerramento" }
-  ],
+{
+  "step": 2,
+  "title": "FASE 2 – LEVANTAMENTO FÍSICO E ORGANIZAÇÃO DO ACERVO ELEGÍVEL",
+  "objective": "Realizar a organização cronológica e a formação de blocos dos documentos separados na fase anterior.",
+  "operational_instructions": {
+    "ordenacao_material": "Organizar os documentos rigorosamente por ano e, dentro de cada ano, pela ordem numérica do procedimento.",
+    "consolidacao_lotes": "Agrupar os prontuários em blocos físicos (com 15) que facilitem a conferência rápida e a futura extração de dados para a planilha.",
+    "verificacao_integridade": "Certificar-se de que os blocos estão íntegros, sem mistura de diferentes códigos de série ou anos distintos no mesmo lote.",
+    "proibicoes_imediatas": [
+      "Preenchimento de planilhas eletrônicas (Planilha_Triagem)",
+      "Acesso ou cadastro no Sistema CADA",
+      "Elaboração de Ofícios ou Justificativas"
+    ]
+  }
+},
+{
+  "step": 3,
+  "title": "FASE 3 – FORMULAÇÃO DA DOCUMENTAÇÃO",
+  "objective": "Preenchimento de Planilha, Ofício e Justificativa com base nos modelos institucionais para formalizar o pedido de eliminação.",
+  "operational_instructions": {
+    "preenchimento_planilha": "Utilizar rigorosamente o modelo 'Planilha_Triagem', transcrevendo os dados dos lotes organizados (Função, Subfunção, Atividade, Documento, Ano e Quantidade).",
+    "reserva_amostragem": "Incluir obrigatoriamente no campo de observações: 'reservado 1% da série documental por amostragem', conforme exigência legal.",
+    "elaboracao_textual": "Redigir o Ofício e a Justificativa utilizando os modelos padrão, garantindo que a fundamentação cite o Decreto Estadual nº 48.897/2004.",
+    "proibicoes_imediatas": [
+      "Solicitação de senhas ou perfis (Etapa 4)",
+      "Inclusão de dados no sistema CADA",
+      "Contacto com cooperativas de reciclagem"
+    ]
+  }
+},
+[
+  {
+    "step": 4,
+    "title": "FASE 4 – ACESSO AO SISTEMA CADA",
+    "objective": "Solicitar a habilitação de perfis específicos no sistema CADA via e-mail institucional.",
+    "operational_instructions": {
+      "destinatario": "cada.ssp@sp.gov.br",
+      "perfis_necessarios": [
+        "SOLICITANTE: Geralmente atribuído ao Escrivão de Polícia Chefe.",
+        "SUBCADA: Atribuído à Autoridade Policial (Delegado Titular) para validação das solicitações."
+      ],
+      "modelo_mensagem": "Utilizar estritamente o arquivo 'Mensagem_Habilitacao.txt', preenchendo Nome, CPF, E-mail funcional e Unidade.",
+      "proibicoes_imediatas": [
+        "Realizar upload de documentos antes do recebimento das senhas.",
+        "Utilizar e-mails não institucionais para o pedido."
+      ]
+    }
+  },
+  {
+    "step": 5,
+    "title": "FASE 5 – CADASTRO DE SOLICITAÇÃO",
+    "objective": "Inclusão dos dados da eliminação no Sistema CADA e upload da documentação formal.",
+    "operational_instructions": {
+      "input_de_dados": "Transcrever fielmente as informações da Planilha de Triagem para os campos do sistema.",
+      "upload_obrigatorio": [
+        "Ofício de Solicitação assinado.",
+        "Justificativa de Eliminação.",
+        "Planilha de Triagem em formato compatível."
+      ],
+      "proibicao": "Avançar sem a conferência dos códigos PID (068.02.02.001), IP (068.02.02.002) ou RO (068.02.02.005)."
+    }
+  },
+  {
+    "step": 6,
+    "title": "FASE 6 – APROVAÇÃO SUBCADA",
+    "objective": "Validação da solicitação pela Autoridade Policial (Delegado Titular) no sistema.",
+    "operational_instructions": {
+      "prerrogativa": "O assistente aceita a declaração de fé pública do Escrivão Solicitante sobre a autorização do Delegado.",
+      "acao": "Acessar o perfil SUBCADA e homologar a lista de documentos inserida na fase anterior.",
+      "verificacao": "Confirmar se todos os itens da planilha batem com o levantamento físico da Etapa 2."
+    }
+  },
+  {
+    "step": 7,
+    "title": "FASE 7 – ACOMPANHAMENTO DE STATUS",
+    "objective": "Monitorar a análise da CADA até a geração e publicação do Edital de Ciência.",
+    "operational_instructions": {
+      "frequencia": "Consultar o Sistema CADA semanalmente para verificar o status 'Aguardando Publicação' ou 'Publicado'.",
+      "documento_alvo": "Edital de Ciência (ANEXO 2).",
+      "evento_critico": "Data de publicação no Diário Oficial do Estado (D.O.E.)."
+    }
+  },
+  {
+    "step": 8,
+    "title": "FASE 8 – TRANSCORRER DE PRAZO",
+    "objective": "Aguardar o prazo legal para manifestação de terceiros interessados na preservação de documentos.",
+    "operational_instructions": {
+      "prazo_legal": "30 (trinta) dias ininterruptos após a publicação no D.O.E..",
+      "proibicao": "É terminantemente proibido iniciar qualquer fragmentação ou entrega de documentos antes do decurso integral deste prazo."
+    }
+  },
+  {
+    "step": 9,
+    "title": "FASE 9 – TERMO DE ELIMINAÇÃO",
+    "objective": "Geração do documento final de encerramento da fase administrativa da eliminação.",
+    "operational_instructions": {
+      "amostragem_obrigatoria": "Reservar 1% da série documental para guarda permanente por amostragem (Art. 29 e 35 do Dec. 48.897/2004).",
+      "acao": "Gerar o Termo de Eliminação no Sistema CADA e colher assinaturas."
+    }
+  },
+  {
+    "step": 10,
+    "title": "FASE 10 – DESTINAÇÃO AMBIENTAL",
+    "objective": "Entrega e fragmentação da massa documental conforme normas ambientais e sociais.",
+    "operational_instructions": {
+      "prioridade_geografica": "Para DEINTER 2, priorizar a cooperativa CORESO em Sorocaba (Contato: 15 99715-9789).",
+      "entidades_autorizadas": "Apenas cooperativas de catadores ou entidades sem fins lucrativos (Lei Estadual nº 14.470/2011).",
+      "proibicoes": [
+        "Incineração de documentos públicos.",
+        "Entrega para empresas privadas com fins lucrativos."
+      ]
+    }
+  },
+  {
+    "step": 11,
+    "title": "FASE 11 – CONCLUSÃO E ARQUIVAMENTO",
+    "objective": "Finalização do processo administrativo no sistema CADA.",
+    "operational_instructions": {
+      "comprovacao_final": [
+        "Upload do Termo de Eliminação assinado.",
+        "Upload do Recibo de Entrega/Fragmentação emitido pela cooperativa."
+      ],
+      "encerramento": "Concluir a solicitação no sistema para que o processo seja arquivado eletronicamente."
+    }
+  }
+],
 
   "regional_focus": {
     "department": "DEINTER 2",
