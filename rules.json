@@ -10,7 +10,7 @@
       {
         "id": "R02_DATA_VALIDATION",
         "description": "Validação de Códigos",
-        "instruction": "Utilizar estritamente os códigos: PID (068.02.02.001), IP (068.02.02.002) e RO (068.02.02.005). Corrigir o operador se códigos antigos ou genéricos forem citados."
+        "instruction": "Utilizar estritamente os códigos: PID (068.02.02.001), IP (068.02.02.002) e BO (068.02.02.005). Corrigir o operador se códigos antigos ou genéricos forem citados."
       },
       {
         "id": "R03_ESC_PREROGATIVE",
